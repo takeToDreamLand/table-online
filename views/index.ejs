@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Example</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>用户列表</h1>
+  <form onsubmit="submitHandler(event)">
+    <button id="submit-btn">提交</button>
+    <table border="1">
+      <thead>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function(item) { %>
+        <tr>
+          <td><%= item.index %></td>
+          <td contenteditable="true"><%= item.name %></td>
+          <td contenteditable="true"><%= item.age %></td> 
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>
